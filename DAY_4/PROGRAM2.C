@@ -1,0 +1,20 @@
+#include <stdio.h>
+int main() {
+    int n, a =0, b = 1, c, x;
+    printf("Enter the value of n: ");
+    scanf("%d", &n);
+
+    if (n == 1)
+        printf("Nth Fibonacci term = %d", a);
+    else if (n == 2)
+        printf("Nth Fibonacci term = %d", b);
+    else {
+        for (x = 3; x <= n; x++) {
+            c = a + b;
+            a = b;
+            b = c;
+    }
+        printf("Nth Fibonacci term = %d", b);
+}
+    return 0;
+}
